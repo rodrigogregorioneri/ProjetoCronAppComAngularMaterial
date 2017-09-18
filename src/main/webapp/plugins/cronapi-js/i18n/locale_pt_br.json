@@ -219,5 +219,19 @@
 	"name":"Nome",
 	"getElementContentName":"Obter conteúdo do elemento",
 	"getElementContentDescription":"Função para obter o conteúdo do elemento. Exemplo <elemento>conteúdo<elemento> retorna conteúdo",
-	"datasource" : "Fonte de dados"
+	"datasource" : "Fonte de dados",
+	"showComponent":"Exibir componente",
+	"showComponentDesc":"Função que exibe um componente da tela",
+	"ComponentParam":"Identificador: Identificador do componente a ser modificado",
+	"hideComponent":"Esconder componente",
+	"hideComponentDesc":"Função que esconde um componente da tela",
+	"CategoryType.TEXT": "Texto",
+  "CategoryType.LOGIC": "Lógica",
+	"searchIds":"Identificador",
+	"searchIdsDescription":"Identificador do campo da tela. Exemplo <div id=meuId /> ",
+	"enableComponent":"Habilitar componente",
+	"enableComponentDesc":"Função que habilita o componente o uso do componente na tela. Exemplo <input disabled=false/>",
+	"disableComponent":"Desabilitar componente",
+	"disableComponentDesc":"Função que desabilita o uso do componente na tela. Exemplo: <input disabled=true />"
+	
 }

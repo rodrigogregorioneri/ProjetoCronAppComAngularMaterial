@@ -765,6 +765,66 @@
    
   };
 
+  /**
+   * @type function
+   * @name {{searchIds}}
+   * @nameTags searchIds
+   * @description {{searchIdsDescription}}
+   * @wizard ids_from_screen
+   * @multilayer true
+   */
+  this.cronapi.screen.searchIds = function() {
+    
+  };
+  
+  /**
+   * @type function
+   * @name {{showComponent}}
+   * @nameTags showComponent
+   * @description {{showComponentDesc}}
+   * @param {ObjectType.STRING} component {{ComponentParam}}
+   * @multilayer true
+   */
+  this.cronapi.screen.showComponent = function(/** @type {ObjectType.OBJECT} @blockType ids_from_screen*/ id) {
+    $('#'+id).show();
+  };
+  
+  /**
+   * @type function
+   * @name {{hideComponent}}
+   * @nameTags hideComponent
+   * @description {{hideComponentDesc}}
+   * @param {ObjectType.STRING} component {{ComponentParam}}
+   * @multilayer true
+   */
+  this.cronapi.screen.hideComponent = function(/** @type {ObjectType.OBJECT} @blockType ids_from_screen*/ id) {
+    $('#'+id).hide();
+  };
+  
+  /**
+   * @type function
+   * @name {{disableComponent}}
+   * @nameTags disableComponent
+   * @description {{disableComponentDesc}}
+   * @param {ObjectType.STRING} component {{ComponentParam}}
+   * @multilayer true
+   */
+  this.cronapi.screen.disableComponent = function(/** @type {ObjectType.OBJECT} @blockType ids_from_screen*/ id) {
+   $.each( $('#input').find('*').addBack(), function(index, value){ $(value).prop('disabled',true); });
+  };
+  
+  /**
+   * @type function
+   * @name {{enableComponent}}
+   * @nameTags enableComponent
+   * @description {{enableComponentDesc}}
+   * @param {ObjectType.STRING} component {{ComponentParam}}
+   * @multilayer true
+   */
+  this.cronapi.screen.enableComponent = function(/** @type {ObjectType.OBJECT} @blockType ids_from_screen*/ id) {
+    $.each( $('#input').find('*').addBack(), function(index, value){ $(value).prop('disabled',false); });
+  };
+
 
   /**
    * @category CategoryType.DATETIME

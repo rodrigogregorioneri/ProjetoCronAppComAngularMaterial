@@ -1,9 +1,9 @@
 {
   "name": "cronapi-js",
-  "version": "0.0.39",
+  "version": "0.0.44-beta",
   "homepage": "https://github.com/technecloud/cronapi-js",
   "authors": [
-    "Arthemus Cicotti Moreira <arthemus.moreira@gmail.com>"
+    "Cronapp <suporte@cronapp.io>"
   ],
   "description": "Public library for CronApp's users",
   "main": "cronapi.js",
@@ -15,13 +15,14 @@
     "test",
     "tests"
   ],
-  "_release": "0.0.39",
+  "_release": "0.0.44-beta",
   "_resolution": {
     "type": "version",
-    "tag": "0.0.39",
-    "commit": "8b82bfd1ac8cdd3a091879ad4203f24a184864dd"
+    "tag": "0.0.44-beta",
+    "commit": "8e56bace7c8ef8df959fb40bb2bc341a31e6282a"
   },
   "_source": "https://github.com/technecloud/cronapi-js.git",
-  "_target": "0.0.39",
-  "_originalSource": "cronapi-js"
+  "_target": "0.0.44-beta",
+  "_originalSource": "cronapi-js",
+  "_direct": true
 }
