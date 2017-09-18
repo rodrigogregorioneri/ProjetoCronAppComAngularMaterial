@@ -2302,7 +2302,8 @@
       "name": "Pesquisa",
       "attributes": [
         "id:java.lang.String",
-        "nome_pesquisa:java.lang.String"
+        "nome_pesquisa:java.lang.String",
+        "respostasPesquisa:RespostasPesquisa"
       ],
       "methods": [
         "+ list(): List<Pesquisa>"
@@ -2312,8 +2313,8 @@
         "y": 10
       },
       "size": {
-        "width": 205.46875,
-        "height": 119.65808868408203
+        "width": 243.359375,
+        "height": 130.71422576904297
       },
       "angle": 0,
       "multitenantContextJsonIgnore": "false",
@@ -2370,6 +2371,25 @@
           "isEncryption": false,
           "referencedColumnName": "",
           "isSearchable": false
+        },
+        {
+          "name": "respostasPesquisa",
+          "type": "RespostasPesquisa",
+          "dbName": "fk_respostasPesquisa",
+          "label": "",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "multitenantContext": "",
+          "pkType": "",
+          "isIgnore": false,
+          "isTransien": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false
         }
       ],
       "queries": [
@@ -2394,12 +2414,12 @@
           "transform": "translate(0,0)"
         },
         ".uml-class-attrs-rect": {
-          "height": 70,
+          "height": 90,
           "transform": "translate(0,50)"
         },
         ".uml-class-methods-rect": {
           "height": 50,
-          "transform": "translate(0,120)"
+          "transform": "translate(0,140)"
         },
         ".uml-class-name-text": {
           "fill": "#000",
@@ -2409,12 +2429,12 @@
         },
         ".uml-class-attrs-text": {
           "font-size": 11,
-          "text": "id\nnome_pesquisa\n"
+          "text": "id\nnome_pesquisa\nrespostasPesquisa\n"
         },
         ".uml-class-attrs-value": {
-          "ref-x": 111.65625,
+          "ref-x": 127.484375,
           "font-size": 11,
-          "text": "java.lang.String\njava.lang.String\n"
+          "text": "java.lang.String\njava.lang.String\nRespostasPesquisa\n"
         },
         ".uml-class-methods-text": {
           "fill": "#0066FF",
@@ -2842,12 +2862,12 @@
         "+ list(): List<RespostasPesquisa>"
       ],
       "position": {
-        "x": 1519,
-        "y": 374
+        "x": 1416,
+        "y": 305
       },
       "size": {
-        "width": 215.125,
-        "height": 119.65808868408203
+        "width": 214.78125,
+        "height": 119.86902618408203
       },
       "angle": 0,
       "multitenantContextJsonIgnore": "false",
@@ -2946,7 +2966,7 @@
           "text": "id\nfuncionarios\n"
         },
         ".uml-class-attrs-value": {
-          "ref-x": 121.3125,
+          "ref-x": 120.3125,
           "font-size": 11,
           "text": "java.lang.String\nProfissionais\n"
         },
@@ -3000,198 +3020,6 @@
       }
     },
     {
-      "type": "uml.Class",
-      "name": "PessquisaQuestoes",
-      "attributes": [
-        "id:java.lang.String",
-        "respostasPesquisa:RespostasPesquisa",
-        "perguntas:java.lang.String"
-      ],
-      "methods": [
-        "+ list(): List<PessquisaQuestoes>"
-      ],
-      "position": {
-        "x": 1178,
-        "y": 348
-      },
-      "size": {
-        "width": 242.15625,
-        "height": 130.50328826904297
-      },
-      "angle": 0,
-      "multitenantContextJsonIgnore": "false",
-      "multitenantContextIgnoreEntities": "",
-      "role": "Auto",
-      "isRest": "true",
-      "multitenantContext": "",
-      "restSecurity": null,
-      "restPath": "",
-      "id": "9f8e6431-ea0d-4bbd-bad6-7a55e0bb83d8",
-      "fields": [
-        {
-          "name": "id",
-          "type": "java.lang.String",
-          "dbName": "id",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "UUID.randomUUID().toString().toUpperCase()",
-          "label": "",
-          "mask": "",
-          "isPrimaryKey": true,
-          "isUniqueKey": false,
-          "isNullable": false,
-          "pkType": "UUID",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "referencedColumnName": "",
-          "isSearchable": false
-        },
-        {
-          "name": "respostasPesquisa",
-          "type": "RespostasPesquisa",
-          "dbName": "fk_respostasPesquisa",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "referencedColumnName": "",
-          "isSearchable": false
-        },
-        {
-          "name": "perguntas",
-          "type": "java.lang.String",
-          "dbName": "perguntas",
-          "dbLength": "",
-          "dbPrecision": "",
-          "dbScale": "",
-          "dbDefaultValue": "",
-          "label": "Perguntas",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "pkType": "",
-          "multitenantContext": "",
-          "jsonIgnore": false,
-          "isTransient": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "referencedColumnName": "",
-          "isSearchable": false
-        }
-      ],
-      "queries": [
-        {
-          "isRest": "true",
-          "name": "list",
-          "query": "select c from $entity c",
-          "void": false,
-          "type": "select"
-        }
-      ],
-      "tableName": null,
-      "runtimeClass": "cronos.widgets.joint.uml.Class",
-      "z": 49,
-      "attrs": {
-        "rect": {
-          "stroke": "yellow",
-          "stroke-width": 2
-        },
-        ".uml-class-name-rect": {
-          "height": 50,
-          "transform": "translate(0,0)"
-        },
-        ".uml-class-attrs-rect": {
-          "height": 90,
-          "transform": "translate(0,50)"
-        },
-        ".uml-class-methods-rect": {
-          "height": 50,
-          "transform": "translate(0,140)"
-        },
-        ".uml-class-name-text": {
-          "fill": "#000",
-          "font-size": 12,
-          "text": "PessquisaQuestoes",
-          "font-weight": "bold"
-        },
-        ".uml-class-attrs-text": {
-          "font-size": 11,
-          "text": "id\nrespostasPesquisa\nperguntas\n"
-        },
-        ".uml-class-attrs-value": {
-          "ref-x": 126.9375,
-          "font-size": 11,
-          "text": "java.lang.String\nRespostasPesquisa\njava.lang.String\n"
-        },
-        ".uml-class-methods-text": {
-          "fill": "#0066FF",
-          "font-size": 11,
-          "text": "+ list(): List<PessquisaQuestoes>"
-        }
-      }
-    },
-    {
-      "type": "uml.Composition",
-      "relationFields": [
-        "respostasPesquisa:target"
-      ],
-      "name": null,
-      "id": "4293ce1f-ff34-4271-a616-10643ebbe49e",
-      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
-      "target": {
-        "id": "9f8e6431-ea0d-4bbd-bad6-7a55e0bb83d8"
-      },
-      "source": {
-        "id": "d87db4ea-2076-478c-9767-401d954c6185"
-      },
-      "labels": [
-        {
-          "position": 0.9,
-          "attrs": {
-            "rect": {
-              "fill": "transparent"
-            },
-            "text": {
-              "text": "*",
-              "font-family": "Arial",
-              "font-size": "12px",
-              "fill": "#cecece"
-            }
-          }
-        }
-      ],
-      "z": 50,
-      "attrs": {
-        ".marker-target": {
-          "d": "",
-          "fill": ""
-        },
-        ".marker-source": {
-          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
-          "fill": "#cecece"
-        }
-      }
-    },
-    {
       "type": "basic.Rect",
       "position": {
         "x": 0,
@@ -3210,6 +3038,9 @@
       "z": 55,
       "namespace": "diagram.app",
       "dataSource": "jdbc/main",
+      "apiPath": "src/main/webapp/raml/diagram/app/api.raml",
+      "chkApi": false,
+      "visionLikePackage": false,
       "attrs": {}
     },
     {
@@ -3381,232 +3212,6 @@
       }
     },
     {
-      "type": "uml.Class",
-      "name": "QuestoesRespostasPesquisa",
-      "attributes": [
-        "id:java.lang.String",
-        "questoes:Questoes",
-        "respostasPesquisa:RespostasPesquisa"
-      ],
-      "methods": [
-        "+ list(): List<QuestoesRespostasPesquisa>"
-      ],
-      "position": {
-        "x": 1365,
-        "y": 209
-      },
-      "size": {
-        "width": 380,
-        "height": 130.50328826904297
-      },
-      "angle": 0,
-      "multitenantContextJsonIgnore": "false",
-      "multitenantContextIgnoreEntities": "",
-      "role": "AssociationClass",
-      "isRest": "true",
-      "multitenantContext": "",
-      "restSecurity": null,
-      "restPath": "",
-      "id": "f7ef0d71-ad52-445e-9b53-11fcc03444fe",
-      "fields": [
-        {
-          "name": "id",
-          "type": "java.lang.String",
-          "dbName": "id",
-          "label": "",
-          "mask": "",
-          "isPrimaryKey": true,
-          "isUniqueKey": false,
-          "isNullable": false,
-          "multitenantContext": "",
-          "pkType": "UUID",
-          "isIgnore": false,
-          "isTransien": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "referencedColumnName": "",
-          "isSearchable": false
-        },
-        {
-          "name": "questoes",
-          "type": "Questoes",
-          "dbName": "fk_questoes",
-          "label": "",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "multitenantContext": "",
-          "pkType": "",
-          "isIgnore": false,
-          "isTransien": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "referencedColumnName": "",
-          "isSearchable": false
-        },
-        {
-          "name": "respostasPesquisa",
-          "type": "RespostasPesquisa",
-          "dbName": "fk_respostasPesquisa",
-          "label": "",
-          "mask": "",
-          "isPrimaryKey": false,
-          "isUniqueKey": false,
-          "isNullable": true,
-          "multitenantContext": "",
-          "pkType": "",
-          "isIgnore": false,
-          "isTransien": false,
-          "isInsertable": true,
-          "isUpdatable": true,
-          "isEncryption": false,
-          "referencedColumnName": "",
-          "isSearchable": false
-        }
-      ],
-      "queries": [
-        {
-          "isRest": "true",
-          "name": "list",
-          "query": "select qr from $entity qr",
-          "void": false,
-          "type": "select"
-        }
-      ],
-      "tableName": null,
-      "runtimeClass": "cronos.widgets.joint.uml.Class",
-      "z": 60,
-      "attrs": {
-        "rect": {
-          "stroke": "yellow",
-          "stroke-width": 2
-        },
-        ".uml-class-name-rect": {
-          "fill": "#fffec0",
-          "height": 50,
-          "transform": "translate(0,0)"
-        },
-        ".uml-class-attrs-rect": {
-          "fill": "#fffec0",
-          "height": 90,
-          "transform": "translate(0,50)"
-        },
-        ".uml-class-methods-rect": {
-          "fill": "#fffec0",
-          "height": 50,
-          "transform": "translate(0,140)"
-        },
-        ".uml-class-name-text": {
-          "fill": "#000",
-          "font-size": 12,
-          "text": "QuestoesRespostasPesquisa",
-          "font-weight": "bold"
-        },
-        ".uml-class-attrs-text": {
-          "fill": "#000",
-          "font-size": 11,
-          "text": "id\nquestoes\nrespostasPesquisa\n"
-        },
-        ".uml-class-attrs-value": {
-          "ref-x": 146.984375,
-          "font-size": 11,
-          "text": "java.lang.String\nQuestoes\nRespostasPesquisa\n"
-        },
-        ".uml-class-methods-text": {
-          "fill": "#0066FF",
-          "font-size": 11,
-          "text": "+ list(): List<QuestoesRespostasPesquisa>"
-        }
-      }
-    },
-    {
-      "type": "uml.Composition",
-      "relationFields": [
-        "questoes:target"
-      ],
-      "name": null,
-      "id": "6953ba86-4947-4f60-91d3-04a80ebcbee4",
-      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
-      "target": {
-        "id": "f7ef0d71-ad52-445e-9b53-11fcc03444fe"
-      },
-      "source": {
-        "id": "13336d59-1914-40c8-9cba-5377a19ff285"
-      },
-      "labels": [
-        {
-          "position": 0.9,
-          "attrs": {
-            "rect": {
-              "fill": "transparent"
-            },
-            "text": {
-              "text": "*",
-              "font-family": "Arial",
-              "font-size": "12px",
-              "fill": "#cecece"
-            }
-          }
-        }
-      ],
-      "z": 61,
-      "attrs": {
-        ".marker-target": {
-          "d": "",
-          "fill": ""
-        },
-        ".marker-source": {
-          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
-          "fill": "#cecece"
-        }
-      }
-    },
-    {
-      "type": "uml.Composition",
-      "relationFields": [
-        "respostasPesquisa:target"
-      ],
-      "name": null,
-      "id": "34536c7e-51c7-4d3b-9f69-e17a67b25a53",
-      "runtimeClass": "cronos.widgets.joint.arrow.OneToMany",
-      "target": {
-        "id": "f7ef0d71-ad52-445e-9b53-11fcc03444fe"
-      },
-      "source": {
-        "id": "d87db4ea-2076-478c-9767-401d954c6185"
-      },
-      "labels": [
-        {
-          "position": 0.9,
-          "attrs": {
-            "rect": {
-              "fill": "transparent"
-            },
-            "text": {
-              "text": "*",
-              "font-family": "Arial",
-              "font-size": "12px",
-              "fill": "#cecece"
-            }
-          }
-        }
-      ],
-      "z": 62,
-      "attrs": {
-        ".marker-target": {
-          "d": "",
-          "fill": ""
-        },
-        ".marker-source": {
-          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
-          "fill": "#cecece"
-        }
-      }
-    },
-    {
       "type": "uml.Composition",
       "relationFields": [
         "ramo:source"
@@ -3647,6 +3252,48 @@
           "fill": "#cecece"
         }
       }
+    },
+    {
+      "type": "uml.Composition",
+      "relationFields": [
+        "respostasPesquisa:source"
+      ],
+      "name": null,
+      "id": "8c04310e-002b-4954-8431-5820dadf310c",
+      "runtimeClass": "cronos.widgets.joint.arrow.OneToOne",
+      "target": {
+        "id": "d87db4ea-2076-478c-9767-401d954c6185"
+      },
+      "source": {
+        "id": "43d1257c-cd48-4b82-9f4c-18984f84f023"
+      },
+      "labels": [
+        {
+          "position": 0.9,
+          "attrs": {
+            "rect": {
+              "fill": "transparent"
+            },
+            "text": {
+              "text": "1",
+              "font-family": "Arial",
+              "font-size": "12px",
+              "fill": "#cecece"
+            }
+          }
+        }
+      ],
+      "z": 64,
+      "attrs": {
+        ".marker-target": {
+          "d": "",
+          "fill": ""
+        },
+        ".marker-source": {
+          "d": "M 40 10 L 20 20 L 0 10 L 20 0 z",
+          "fill": "#cecece"
+        }
+      }
     }
   ],
   "selectedGroup": "1d7f906f-a526-482d-aaf4-08d227ae8c18",
@@ -3668,7 +3315,6 @@
         "d87db4ea-2076-478c-9767-401d954c6185",
         "a3918144-d938-466f-a465-e8e470e14512",
         "b84d3503-712d-4dce-a65d-be07b3e427b5",
-        "9f8e6431-ea0d-4bbd-bad6-7a55e0bb83d8",
         "d2e50f97-0b9e-4037-94ba-af64568af247",
         "c265a897-d4de-4434-a669-0195ef13bd13",
         "70af8497-989b-4bad-b28f-2556fbefb65c",
@@ -3679,7 +3325,6 @@
         "15004f10-da7e-4374-8681-819c32438033",
         "1df87f56-c5ba-47f5-8e68-82931f49b989",
         "d96350db-3eb9-445c-859e-d7e1aa85e5b7",
-        "f7ef0d71-ad52-445e-9b53-11fcc03444fe",
         "43d1257c-cd48-4b82-9f4c-18984f84f023"
       ]
     }
